@@ -1,0 +1,10 @@
+.image > img{
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+}
+.review-filed textarea{
+  width: 100%;
+  outline: none;
+  border-color:#BDBDBD;
+}

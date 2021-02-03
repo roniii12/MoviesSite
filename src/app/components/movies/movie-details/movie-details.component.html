@@ -1,3 +1,112 @@
-<div class="image">
-  <img src="https://a10.gaanacdn.com/images/albums/16/3812116/crop_80x80_3812116.jpg" alt="">
+<div class="header-details">
+  <div class="image">
+    <img src="https://a10.gaanacdn.com/images/albums/16/3812116/crop_80x80_3812116.jpg" alt="">
+  </div>
+  <div class="content-header">
+    <div class="rating">
+      <app-rating></app-rating>
+      <app-rating></app-rating>
+      <app-rating></app-rating>
+    </div>
+    <div class="title">
+      Harry Potter
+    </div>
+    <div class="review">
+      it's talking about Harry Poter that is amazing magicker
+    </div>
+    <div class="cast-title">
+      Cast & Crew
+    </div>
+    <div class="wrap-cast">
+      <a #leftArrow class="left-arrow"  [ngStyle]="{'visibility': isLeftArrowAppear ? 'visible':'hidden'}" (click)="onLeftArrowClick()"></a>
+      <div #wrapCastList class="wrap-cast-list">
+        <div #castList class="cast-list" [ngStyle]="{'transform': 'translateX('+-translateCard+'px)'}">
+          <div class="cast-person">
+            <div class="person-image">
+              <img src="https://static.toiimg.com/thumb/74330907.cms?width=71&amp;height=71&amp;imgsize=82627">
+            </div>
+            <div class="person-name">
+              Girjia Joshi
+            </div>
+            <small class="role">
+              Actor
+            </small>
+          </div>
+          <div class="cast-person">
+            <div class="person-image">
+              <img src="https://static.toiimg.com/thumb/74330907.cms?width=71&amp;height=71&amp;imgsize=82627">
+            </div>
+            <div class="person-name">
+              Girjia Joshi
+            </div>
+            <small class="role">
+              Actor
+            </small>
+          </div>
+          <div class="cast-person">
+            <div class="person-image">
+              <img src="https://static.toiimg.com/thumb/74330907.cms?width=71&amp;height=71&amp;imgsize=82627">
+            </div>
+            <div class="person-name">
+              Girjia Joshi
+            </div>
+            <small class="role">
+              Actor
+            </small>
+          </div>
+          <div class="cast-person">
+            <div class="person-image">
+              <img src="https://static.toiimg.com/thumb/74330907.cms?width=71&amp;height=71&amp;imgsize=82627">
+            </div>
+            <div class="person-name">
+              Girjia Joshi
+            </div>
+            <small class="role">
+              Actor
+            </small>
+          </div>
+          <div class="cast-person">
+            <div class="person-image">
+              <img src="https://static.toiimg.com/thumb/74330907.cms?width=71&amp;height=71&amp;imgsize=82627">
+            </div>
+            <div class="person-name">
+              Girjia Joshi
+            </div>
+            <small class="role">
+              Actor
+            </small>
+          </div>
+          <div class="cast-person">
+            <div class="person-image">
+              <img src="https://static.toiimg.com/thumb/74330907.cms?width=71&amp;height=71&amp;imgsize=82627">
+            </div>
+            <div class="person-name">
+              Girjia Joshi
+            </div>
+            <small class="role">
+              Actor
+            </small>
+          </div>
+          <div class="cast-person">
+            <div class="person-image">
+              <img src="https://static.toiimg.com/thumb/74330907.cms?width=71&amp;height=71&amp;imgsize=82627">
+            </div>
+            <div class="person-name">
+              Girjia Joshi
+            </div>
+            <small class="role">
+              Actor
+            </small>
+          </div>
+        </div>
+      </div>
+      <a #rightArrow class="right-arrow" [ngStyle]="{'visibility': isRightArrowAppear ? 'visible':'hidden'}" (click)="onRightArrowClick()"></a>
+    </div>
+  </div>
+</div>
+<div class="wrap-review">
+  <app-movie-review></app-movie-review>
+</div>
+<div class="wrap-comments">
+  <app-movie-comments></app-movie-comments>
 </div>

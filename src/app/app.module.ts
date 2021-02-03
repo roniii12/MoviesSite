@@ -13,6 +13,9 @@ import { MovieNewComponent } from './components/movies/movie-new/movie-new.compo
 import { RatingComponent } from './components/movies/rating/rating.component';
 import { MovieItemComponent } from './components/movies/movies-list/movie-item/movie-item.component';
 import { MovieDetailsComponent } from './components/movies/movie-details/movie-details.component';
+import { MovieReviewComponent } from './components/movies/movie-details/movie-review/movie-review.component';
+import { MovieCommentsComponent } from './components/movies/movie-comments/movie-comments.component';
+import { CommentNewComponent } from './components/movies/movie-comments/comment-new/comment-new.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { MovieDetailsComponent } from './components/movies/movie-details/movie-d
     MovieItemComponent,
     MovieDetailsComponent,
     MovieNewComponent,
-    RatingComponent
+    RatingComponent,
+    MovieReviewComponent,
+    MovieCommentsComponent,
+    CommentNewComponent
   ],
   imports: [
     BrowserModule,

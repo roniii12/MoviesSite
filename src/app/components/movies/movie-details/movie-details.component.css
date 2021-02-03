@@ -1,0 +1,111 @@
+.header-details{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+.image{
+  width: 150px;
+  height: 200px;
+  margin-right: 40px;
+}
+.image img{
+  width: 100%;
+  height: 100%;
+  border: 2px solid gray;
+  border-radius: 2px;
+  padding: 1px;
+}
+.header-details .title{
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.header-details .cast-title{
+  margin: 10px 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.header-details .wrap-cast{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.left-arrow, .right-arrow{
+  width: 9px;
+  visibility: hidden;
+  cursor: pointer;
+}
+.left-arrow::after, .right-arrow::after{
+  position: absolute;
+  content: '';
+  width: 9px;
+  height: 9px;
+  left: -7px;
+  top: 30px;
+  border-width: 0 3px 3px 0;
+  border-style: solid;
+  transform: rotate(-225deg);
+  display: block;
+}
+.right-arrow::after{
+  left: auto;
+  right: -7px;
+  transform: rotate(-45deg);
+}
+.wrap-cast{
+  width: 330px;
+}
+.cast-person{
+  text-align: center;
+  font-weight: 600;
+  margin-right: 10px;
+  /* width: 100%; */
+}
+
+.wrap-cast .person-image img{
+  border-radius: 50%;
+  height: 71px;
+}
+.wrap-cast-list{
+  width: 100%;
+  overflow: hidden;
+}
+.cast-list{
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  transition: 0.4s;
+}
+.cast-person .person-name{
+  font-size: .8rem;
+  line-height: .5;
+  margin-top: 5px;
+}
+small.role{
+  color: #757575;
+  font-size: .7rem;
+}
+
+
+@media screen and (max-width: 400px){
+  .header-details{
+    flex-wrap: wrap;
+  }
+  .image{
+    width: 150px;
+    height: 200px;
+    margin-right: 40px;
+    flex-grow: 1;
+    padding: 0 40px 0px 40px;
+    margin: 0 0 10px 0;
+    background: #acacac;
+    border-radius: 2px;
+  }
+  .content-header{
+    padding-left: 10px;
+  }
+}
