@@ -21,7 +21,7 @@
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1;
-  margin-bottom: 5px;
+  margin: 8px 0;
 }
 .header-details .cast-title{
   margin: 10px 0;
@@ -88,6 +88,23 @@
 small.role{
   color: #757575;
   font-size: .7rem;
+}
+
+.wrap-review{
+  margin: 2rem 0 .5rem 0;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1px;
+  box-shadow: 0 1px 2px 1px rgb(0 0 0 / 10%);
+}
+.wrap-comments{
+  margin: 0;
+  width: 70%;
+  overflow-y: hidden;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1px;
+  box-shadow: 0 1px 2px 1px rgb(0 0 0 / 10%);
 }
 
 

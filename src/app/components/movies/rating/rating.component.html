@@ -1,3 +1,27 @@
-<div class="rating">
-  <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+<div class="rating" (mouseleave)="outFromStars()" (click)="clickOnStar()">
+  <span class="title-rating" [style]="'width: '+ this.widthTitle+';'" *ngIf="ratingTitle!==''">
+    {{ratingTitle}}
+  </span>
+  <div [ngStyle]="{'cursor': canSelectStars?'pointer':'default'}" (mouseleave)="outFromStars()" (click)="clickOnStar()">
+    <span class="halfStyle" *ngFor="let star of arrayOfNumber; let i = index;" [ngStyle]="{'font-size':sizeStar+'rem'}">
+      <span class="widthStar">&#9733;</span>
+      <span
+        class="first"
+        (mouseover)="hoverOnStar(i,'first')"
+        [ngStyle]="{'width': i===fullStar && halfStar!==0?(halfStar)+'%':'50%','color': i<fullStar||(i===fullStar&&halfStar!==0)?this.colorOfStars:'#BDBDBD'}"
+        >&#9733;</span
+      >
+      <span
+        class="second"
+        (mouseover)="hoverOnStar(i,'second')"
+        [ngStyle]="{'width': i===fullStar && halfStar!==0?(100-halfStar)+'%':'50%','left': i===fullStar && halfStar!==0?halfStar + '%':'50%', 'color': i<fullStar?this.colorOfStars:'#BDBDBD'}"
+        >&#9733;</span
+      >
+    </span>
+  </div>
+  <span class="rate-number" [ngStyle]="{'font-size':sizeStar+'rem'}" *ngIf="ratingTitle!=''">
+    <span class="dividend">{{(this.fullStar + this.halfStar/100).toFixed(1)}}</span>
+    <span class="divisor">/{{lengthOfStars}}</span>
+  </span>
+  <!-- <span>☆</span><span>☆</span><span>☆</span><span>☆</span> -->
 </div>

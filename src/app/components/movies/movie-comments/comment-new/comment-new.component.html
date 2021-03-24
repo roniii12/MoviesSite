@@ -3,9 +3,17 @@
     <img src="../../../../../assets/site/image/anonimy.cms" alt="">
   </div>
   <div class="wrap-rating">
-    <app-rating></app-rating>
+    <app-rating [ratingTitle]="'My Rating'" [widthTitle]="'fit-content'" [canSelectStars]="true" [starColor]="0" [colorOfStars]="'gold'" (selectedStars)="onSelectedStart($event)"></app-rating>
   </div>
 </div>
 <div class="review-filed">
-  <textarea name="newReview" id="newReview" cols="30" rows="3"></textarea>
+  <textarea name="newReview" id="newReview" [formControl]="review" rows="3" placeholder="Write your review here..."></textarea>
+</div>
+<div class="comment-submit">
+  <button
+  class="comment-submitButton"
+  [disabled]="numberOfSelectedStars===0 && (review.value===''||review.value==null)"
+  >
+    Submit
+  </button>
 </div>

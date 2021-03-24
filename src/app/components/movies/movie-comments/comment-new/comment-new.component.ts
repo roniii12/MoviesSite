@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-comment-new',
@@ -9,7 +10,14 @@ export class CommentNewComponent implements OnInit {
 
   constructor() { }
 
+  numberOfSelectedStars:number = 0;
+  review = new FormControl();
+
   ngOnInit(): void {
+  }
+
+  onSelectedStart(number:number){
+    this.numberOfSelectedStars=number;
   }
 
 }

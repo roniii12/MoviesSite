@@ -1,0 +1,66 @@
+<div class="wrap-auth">
+  <div class="wrap-auth-content">
+    <div class="page-title">
+      Movies Reviews
+    </div>
+    <div *ngIf="isLoading" style="text-align: center;">
+      <app-loading-spinner></app-loading-spinner>
+    </div>
+    <div class="form" *ngIf="!isLoading">
+      <div class="form-title">
+        {{isLoginMode?'Login To Heroes Company': 'SignUp To Heroes Comapny'}}
+      </div>
+      <div *ngIf="this.error" class="errorMsg large">
+        {{this.error}}
+      </div>
+      <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+        <div class="form-control">
+          <input
+            id="username"
+            placeholder="username"
+            name="username"
+            class="form-input"
+            formControlName="username"
+            [ngClass]="{'errorField':username.touched && username.errors}"
+            (focus)="username.errors?null:username.markAsUntouched()"
+          />
+          <div *ngIf="username.touched && username.errors" class="errorMsg">
+            <svg aria-hidden="true" class="errorMsg-icon" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
+            <span *ngIf="username.errors.required">Please enter a username</span>
+          </div>
+        </div>
+        <div class="form-control">
+          <input
+            type="password"
+            id="password"
+            placeholder="password"
+            class="form-input"
+            name="password"
+            formControlName="password"
+            [ngClass]="{'errorField':password.touched && password.errors}"
+            (focus)="password.errors? null:password.markAsUntouched()"
+          />
+          <div *ngIf="password.touched && password.errors" class="errorMsg">
+            <svg aria-hidden="true" class="errorMsg-icon" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
+            <span *ngIf="password.errors.required">Please enter a password</span>
+            <span *ngIf="password.errors.pattern">password must contains 8 charts with: 1 capital letter, 1 digit and one none-alphanumeric char</span>
+          </div>
+        </div>
+        <div class="form-control">
+          <button
+            type="submit"
+            class="form-button"
+            [disabled]="!authForm.valid"
+          >
+            {{ isLoginMode ? 'Log In' : 'Sign Up' }}
+          </button>
+        </div>
+        <div class="form-control">
+          <a class="switchButton" routerLink="/{{isLoginMode ? 'signUp':'login'}}" type="button">
+            {{isLoginMode ? 'Create New Account' : 'Switch To Login'}}
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

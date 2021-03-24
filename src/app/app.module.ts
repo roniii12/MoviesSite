@@ -16,28 +16,26 @@ import { MovieDetailsComponent } from './components/movies/movie-details/movie-d
 import { MovieReviewComponent } from './components/movies/movie-details/movie-review/movie-review.component';
 import { MovieCommentsComponent } from './components/movies/movie-comments/movie-comments.component';
 import { CommentNewComponent } from './components/movies/movie-comments/comment-new/comment-new.component';
+import { CommentItemComponent } from './components/movies/movie-comments/comment-item/comment-item.component';
+import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MoviesListComponent,
-    MovieItemComponent,
-    MovieDetailsComponent,
-    MovieNewComponent,
-    RatingComponent,
-    MovieReviewComponent,
-    MovieCommentsComponent,
-    CommentNewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([]),
+    SharedModule,
+    CoreModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

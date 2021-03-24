@@ -1,3 +1,13 @@
+.header-review{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  margin: 10px 0;
+}
+.image{
+  margin-right: 10px;
+}
 .image > img{
   width: 41px;
   height: 41px;
@@ -7,4 +17,27 @@
   width: 100%;
   outline: none;
   border-color:#BDBDBD;
+}
+.comment-submit{
+  width: 100%;
+  text-align: end;
+}
+.comment-submitButton{
+  font-size: 1rem;
+  font-weight: 600;
+  padding: .5rem 1rem;
+  border: 1px solid gold;
+  background-color: gold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.comment-submitButton:disabled{
+  background-color: #BDBDBD;
+  border: none;
+  color: #9E9E9E;
+  cursor: default;
+}
+
+#newReview{
+  padding: 10px;
 }

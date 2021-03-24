@@ -1,0 +1,12 @@
+.wrap-body{
+  background-color: #FAFAFA;
+  width: 100%;
+  min-height: 100vh;
+}
+.wrap-main{
+  width: 700px;
+  margin: auto;
+}
+.wrap-header{
+  z-index: 100;
+}

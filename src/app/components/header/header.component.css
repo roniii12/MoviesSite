@@ -1,0 +1,113 @@
+*{
+  outline: none;
+}
+.top-header{
+  background-color: #212121;
+  text-align: end;
+  padding: .2rem .8rem .5rem .8rem;
+  color: #9E9E9E;
+}
+.top-header > .auth{
+  text-decoration: none;
+  outline: none;
+  color:#9E9E9E;
+  cursor: pointer;
+  font-weight: 600;
+}
+.header-second{
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.wrap-header-second{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: fit-content;
+  height: 3.5rem;
+  position: relative;
+  align-items: center;
+  margin: auto;
+  z-index: 100;
+}
+.logo{
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  line-height: .9;
+  align-items: center;
+  width: fit-content;
+  padding-right: 20px;
+  cursor: pointer;
+  color: #E64A19;
+  text-shadow: 1px 1px 30px black, 1px 1px 10px blue, 1px 1px 2px black;
+}
+.logo > small{
+  font-size: .9rem;
+  font-weight: 600;
+  color: #616161;
+}
+/* .header-category::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 100%
+} */
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.header-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100%;
+  align-items: center;
+}
+li.header-category{
+  width: fit-content;
+  height: fit-content;
+  padding: 0 8px;
+  border-width: 0 1px 0 1px;
+  cursor: pointer;
+}
+.link:hover{
+  text-decoration: underline;
+}
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.header-category .dropdown-menu{
+  display: none;
+}
+.header-category:hover .dropdown-menu{
+  display: block;
+  width: 100%;
+  z-index: 100
+}
+.header-category .dropdown-menu ul{
+  position: absolute;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #E64A19;
+  overflow-y: auto;
+  max-height: 20vh;
+}
+
+.header-category .dropdown-menu li{
+  color: #fff;
+}

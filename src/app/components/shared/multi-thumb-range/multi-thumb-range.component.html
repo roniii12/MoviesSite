@@ -1,0 +1,21 @@
+<div class="middle">
+	<div class="multi-range-slider">
+		<input type="range" id="input-left" (input)="setLeftValue()" [formControl]="rangeLeftValueElement" min="{{rangeLeftMin}}" max="{{rangeLeftMax}}" value="25">
+		<input type="range" id="input-right" (input)="setRightValue()" [formControl]="rangeRightValueElement" min="{{rangeRightMin}}" max="{{rangeRightMax}}" value="90">
+
+		<div class="slider">
+			<div class="track"></div>
+			<div class="range" [ngStyle]="{'left':percentLeft, 'right':percentRight}"></div>
+			<div class="thumb left" [ngStyle]="{'left':percentLeft}">
+        <div class="value left">
+          {{rangeLeftValue}}
+        </div>
+      </div>
+			<div class="thumb right" [ngStyle]="{'right':percentRight}">
+        <div class="value right">
+          {{rangeRightValue}}
+        </div>
+      </div>
+		</div>
+	</div>
+</div>
